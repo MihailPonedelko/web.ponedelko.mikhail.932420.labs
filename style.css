@@ -50,24 +50,27 @@ form {
 }
 
 label {
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 5px;
     font-weight: bold;
 }
 
 input {
-    width: 90%;
-    margin-top: 5px;
-    margin-bottom: 10px;
+    display: block;
+    width: 300px;
     padding: 5px;
 }
 
 textarea {
-    width: 90%;
-    margin-top: 5px;
-    margin-bottom: 10px;
+    display: block;
+    width: 1000px;
     padding: 5px;
 }
 
 button {
+    display: block;
+    margin-top: 10px;
     padding: 8px;
     background-color: #1c4463;
     color: white;
