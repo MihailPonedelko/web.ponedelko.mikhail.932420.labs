@@ -1,14 +1,20 @@
+:root {
+    --main-color: #dff3ff;
+    --accent-color: #123d66;
+    --main-font: Arial, sans-serif;
+}
+
 body {
     margin: 20px;
-    background-color: #e6f3ff;
-    color: #153b5b;
-    font-family: Arial;
+    background-color: var(--main-color);
+    color: #132f47;
+    font-family: var(--main-font);
     font-size: 16px;
 }
 
 header {
     padding: 20px;
-    background-color: #1c4463;
+    background-color: var(--accent-color);
     color: white;
     text-align: center;
 }
@@ -25,7 +31,7 @@ main {
     margin-top: 20px;
     padding: 20px;
     background-color: white;
-    border: 1px solid #1c4463;
+    border: 1px solid var(--accent-color);
 }
 
 aside {
@@ -33,16 +39,49 @@ aside {
     width: 25%;
     margin-top: 20px;
     padding: 15px;
-    background-color: #cce8ff;
-    border: 1px solid #1c4463;
+    background-color: rgba(255, 255, 255, 0.55);
+    border: 1px solid var(--accent-color);
+    backdrop-filter: blur(6px);
 }
 
 section {
     margin-bottom: 30px;
 }
 
-h2 {
-    color: #1c4463;
+#skills {
+    position: static;
+}
+
+#projects {
+    position: relative;
+}
+
+#projects ol {
+    padding-left: 30px;
+}
+
+#projects li {
+    margin-bottom: 10px;
+    padding: 12px;
+    background-color: var(--main-color);
+    border: 1px solid #9bc8e6;
+}
+
+#projects li:hover {
+    box-shadow: inset 0 0 12px #4d9dcc;
+}
+
+#projects li:active {
+    opacity: 0.65;
+}
+
+.research-mark {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 5px;
+    background-color: var(--accent-color);
+    color: white;
 }
 
 form {
@@ -56,36 +95,59 @@ label {
     font-weight: bold;
 }
 
-input {
-    display: block;
-    width: 300px;
-    padding: 5px;
-}
-
+input,
 textarea {
     display: block;
-    width: 1000px;
-    padding: 5px;
+    width: 95%;
+    padding: 7px;
+    border: 1px solid var(--accent-color);
+    font-family: var(--main-font);
+}
+
+input:focus,
+textarea:focus,
+button:focus {
+    outline: 3px solid #287eb3;
 }
 
 button {
     display: block;
     margin-top: 10px;
     padding: 8px;
-    background-color: #1c4463;
+    background-color: var(--accent-color);
     color: white;
-    border: 1px solid #153b5b;
+    border: 1px solid #0b2942;
+}
+
+button:hover {
+    background-color: #1d5685;
+}
+
+button:active {
+    background-color: #0b2942;
+}
+
+a {
+    color: #064e7a;
+}
+
+a:visited {
+    color: #56366f;
+}
+
+a:hover {
+    color: #8a2d00;
+}
+
+a:active {
+    color: #9c0000;
 }
 
 footer {
     clear: both;
     margin-top: 20px;
     padding: 15px;
-    background-color: #1c4463;
+    background-color: var(--accent-color);
     color: white;
     text-align: center;
-}
-
-footer a {
-    color: #cce8ff;
 }
