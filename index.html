@@ -1,44 +1,53 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta
-	    name = "description"
-		content = "Страница о начуных интересахПонеделко Михаила"
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta
+        name="description"
+        content="Страница о научных интересах Понеделко Михаила"
+    >
+    <title>Лабораторная работа №2 — вариант 15</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
 
-	>
-	<title>laba01 - 15</title>
-	<link rel="stylesheet" type="text/css" href="style.css">
+    <style>
+        main h2,
+        aside h2 {
+            color: var(--accent-color);
+            text-shadow: 1px 1px 2px #9bc8e6;
+        }
+    </style>
 </head>
 <body>
-	<header>
-		<img
-			class="avatar"
-			src="images/avatar.jpg"
-			width="220"
-			height="220"
-		>
+    <header>
+        <img
+            class="avatar"
+            src="images/avatar.jpg"
+            alt="Фотография Михаила Понеделко"
+            width="220"
+            height="220"
+        >
 
-		<div>
-			<p class="student-info">Студент группы 932420</p>
-			<h1>Михаил Понеделко</h1>
-		</div>
-	</header>
+        <div>
+            <p class="student-info">Студент группы 932420</p>
+            <h1>Михаил Понеделко</h1>
+        </div>
+    </header>
 
-	<div class="page-layout">
-		<main>
-			<section id="skills">
-				<h2>Навыки</h2>
-				<ul>
-					<li>Работа с данными и поиск закономерностей</li>
-					<li>Проведение вычислительных экспериментов</li>
-					<li>Программирование на Python и C++</li>
-					<li>Представление результатов исследования</li>
-				</ul>
-			</section>
+    <div class="page-layout">
+        <main>
+            <section id="skills">
+                <h2>Навыки</h2>
+                <ul>
+                    <li>Работа с данными и поиск закономерностей</li>
+                    <li>Проведение вычислительных экспериментов</li>
+                    <li>Программирование на Python и C++</li>
+                    <li>Представление результатов исследования</li>
+                </ul>
+            </section>
 
-			<section id="projects">
+            <section id="projects">
+                <span class="research-mark">№15</span>
                 <h2>Проекты и исследования</h2>
 
                 <ol>
@@ -61,9 +70,9 @@
                 </ol>
             </section>
 
-			<h2>Обратная связь</h2>
+            <h2>Обратная связь</h2>
 
-            <form action="#" method="post">
+            <form action="#" method="post" style="opacity: 0.9;">
                 <label for="name">Имя</label>
                 <input
                     id="name"
@@ -71,7 +80,7 @@
                     name="name"
                     placeholder="Введите ваше имя"
                     required
-                > <br>
+                >
 
                 <label for="email">Email</label>
                 <input
@@ -80,7 +89,7 @@
                     name="email"
                     placeholder="Введите ваш Email"
                     required
-                > <br>
+                >
 
                 <label for="message">Сообщение</label>
                 <textarea
@@ -93,17 +102,22 @@
 
                 <button type="submit">Отправить</button>
             </form>
-		</main>
-		<aside>
+        </main>
+
+        <aside>
             <h2>Область науки</h2>
             <p>
                 Меня вдохновляют компьютерные науки, искусственный интеллект
                 и применение математических методов в программировании.
             </p>
+            <a href="https://ru.wikipedia.org/wiki/Информатика">
+                Подробнее об информатике
+            </a>
         </aside>
-	</div>
-	<footer>
-        <p>© 2026 Михаил Понеделько</p>
+    </div>
+
+    <footer>
+        <p>© 2026 Михаил Понеделко</p>
     </footer>
 </body>
 </html>
