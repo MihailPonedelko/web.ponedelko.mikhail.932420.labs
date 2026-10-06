@@ -7,7 +7,7 @@
         name="description"
         content="Страница о научных интересах Понеделко Михаила"
     >
-    <title>lab02 - 15</title>
+    <title>lab03 - 15</title>
     <link rel="stylesheet" type="text/css" href="style.css">
 
     <style>
@@ -32,6 +32,14 @@
             <p class="student-info">Студент группы 932420</p>
             <h1>Михаил Понеделко</h1>
         </div>
+        <nav aria-label="Навигация по странице">
+            <ul>
+                <li><a href="#skills">Навыки</a></li>
+                <li><a href="#projects">Проекты</a></li>
+                <li><a href="#hypotheses">Гипотезы</a></li>
+                <li><a href="#methods">Методы</a></li>
+            </ul>
+        </nav>
     </header>
 
     <div class="page-layout">
@@ -68,6 +76,60 @@
                         в виртуальной среде.
                     </li>
                 </ol>
+            </section>
+
+            <section id="hypotheses">
+                <h2>Гипотезы исследования</h2>
+                <div class="hypothesis-list">
+                    <article class="hypothesis-card">
+                        <h3>Алгоритмы рекомендаций</h3>
+                        <p>Персональные рекомендации влияют на выбор пользователя.</p>
+                        <p><strong>Статус:</strong> проверяется</p>
+                    </article>
+                    <article class="hypothesis-card">
+                        <h3>Параллельные вычисления</h3>
+                        <p>Параллельная обработка сокращает время расчёта.</p>
+                        <p><strong>Статус:</strong> проверяется</p>
+                    </article>
+                    <article class="hypothesis-card">
+                        <h3>Прогнозирование</h3>
+                        <p>Модель машинного обучения может точнее предсказывать результат.</p>
+                        <p><strong>Статус:</strong> запланирована</p>
+                    </article>
+                </div>
+            </section>
+
+            <section id="methods">
+                <h2>Методы исследования</h2>
+                <div class="methods-grid">
+                    <article class="method-card">
+                        <img class="method-icon" src="images/analysis.webp" alt="" width="32" height="32">
+                        <h3>Анализ данных</h3>
+                        <p>Поиск закономерностей в собранных данных.</p>
+                        <details>
+                            <summary>Подробнее</summary>
+                            <p>Сравниваю показатели и отмечаю повторяющиеся зависимости.</p>
+                        </details>
+                    </article>
+                    <article class="method-card">
+                        <img class="method-icon" src="images/experiment.webp" alt="" width="32" height="32">
+                        <h3>Эксперимент</h3>
+                        <p>Проверка гипотезы на нескольких наборах данных.</p>
+                        <details>
+                            <summary>Подробнее</summary>
+                            <p>Меняю одно условие и сравниваю полученные результаты.</p>
+                        </details>
+                    </article>
+                    <article class="method-card">
+                        <img class="method-icon" src="images/comparison.webp" alt="" width="32" height="32">
+                        <h3>Сравнение</h3>
+                        <p>Сопоставление работы двух способов решения.</p>
+                        <details>
+                            <summary>Подробнее</summary>
+                            <p>Оцениваю время выполнения и точность каждого способа.</p>
+                        </details>
+                    </article>
+                </div>
             </section>
 
             <h2>Обратная связь</h2>

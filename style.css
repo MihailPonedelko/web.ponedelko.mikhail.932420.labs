@@ -4,6 +4,10 @@
     --main-font: Arial, sans-serif;
 }
 
+* {
+    box-sizing: border-box;
+}
+
 body {
     margin: 20px;
     background-color: var(--main-color);
@@ -25,9 +29,42 @@ header {
     border: 3px solid white;
 }
 
+nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin: 20px 0 0;
+    padding: 0;
+    list-style: none;
+}
+
+nav a,
+nav a:visited {
+    display: block;
+    padding: 6px 10px;
+    color: white;
+}
+
+nav a:hover,
+nav a:focus {
+    background-color: #1d5685;
+}
+
+.page-layout {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    background-color: var(--main-color);
+    background-image:
+        radial-gradient(circle at 88% 90px, #378cbd 0 55px, transparent 56px),
+        radial-gradient(circle at 78% 180px, #8ac2df 0 70px, transparent 71px),
+        radial-gradient(circle at 75% 98%, #378cbd 0 55px, transparent 56px);
+}
+
 main {
-    float: left;
-    width: 60%;
+    flex: 3;
+    min-width: 0;
     margin-top: 20px;
     padding: 20px;
     background-color: white;
@@ -35,11 +72,11 @@ main {
 }
 
 aside {
-    float: right;
-    width: 25%;
+    flex: 1;
+    min-width: 0;
     margin-top: 20px;
     padding: 15px;
-    background-color: rgba(255  , 255, 255, 0.55);
+    background-color: rgba(255, 255, 255, 0.55);
     border: 1px solid var(--accent-color);
     backdrop-filter: blur(6px);
 }
@@ -54,6 +91,11 @@ section {
 
 #projects {
     position: relative;
+}
+
+#projects h2 {
+    margin-top: 0;
+    padding-right: 60px;
 }
 
 #projects ol {
@@ -72,7 +114,7 @@ section {
 }
 
 #projects li:active {
-    opacity: 0.65;
+    opacity: 0.75;
 }
 
 .research-mark {
@@ -82,6 +124,50 @@ section {
     padding: 5px;
     background-color: var(--accent-color);
     color: white;
+}
+
+.hypothesis-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.hypothesis-card {
+    flex: 0 0 calc(33.333% - 8px);
+    padding: 12px;
+    background-color: var(--main-color);
+    border: 1px solid var(--accent-color);
+}
+
+.hypothesis-card h3,
+.method-card h3 {
+    margin: 8px 0;
+}
+
+.methods-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+}
+
+.method-card {
+    padding: 12px;
+    border: 1px solid var(--accent-color);
+}
+
+.method-icon {
+    width: 32px;
+    height: 32px;
+}
+
+details summary {
+    cursor: pointer;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: #555;
+    opacity: 1;
 }
 
 form {
@@ -150,4 +236,33 @@ footer {
     background-color: var(--accent-color);
     color: white;
     text-align: center;
+}
+
+@media (max-width: 899px) {
+    .page-layout {
+        flex-direction: column;
+    }
+
+    main,
+    aside {
+        width: 100%;
+    }
+
+    .hypothesis-card {
+        flex-basis: calc(50% - 6px);
+    }
+
+    .methods-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 599px) {
+    .hypothesis-card {
+        flex-basis: 100%;
+    }
+
+    .methods-grid {
+        grid-template-columns: 1fr;
+    }
 }
