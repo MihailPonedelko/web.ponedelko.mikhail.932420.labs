@@ -7,8 +7,10 @@
         name="description"
         content="Страница о научных интересах Понеделко Михаила"
     >
-    <title>lab03 - 15</title>
+    <title>lab04 - 15</title>
     <link rel="stylesheet" type="text/css" href="style.css">
+
+    <script src="script.js" defer></script>
 
     <style>
         main h2,
@@ -38,6 +40,7 @@
                 <li><a href="#projects">Проекты</a></li>
                 <li><a href="#hypotheses">Гипотезы</a></li>
                 <li><a href="#methods">Методы</a></li>
+                <li><a href="#measurements">Измерения</a></li>
             </ul>
         </nav>
     </header>
@@ -129,6 +132,23 @@
                             <p>Оцениваю время выполнения и точность каждого способа.</p>
                         </details>
                     </article>
+                </div>
+            </section>
+
+            <section id="measurements">
+                <h2>Результаты эксперимента</h2>
+                <button type="button" onclick="getResults()">Получить результаты</button>
+                <p id="measurement-data">Измерения ещё не получены.</p>
+                <div id="measurement-actions" hidden>
+                    <button type="button" onclick="showMaximum()">Максимум</button>
+                    <button type="button" onclick="showFilteredValues()">Фильтрация</button>
+                    <button type="button" onclick="showSum()">Сумма</button>
+                    <button type="button" onclick="performAll()">Выполнить всё</button>
+                </div>
+                <div aria-live="polite">
+                    <p id="maximum-result"></p>
+                    <p id="sum-result"></p>
+                    <p id="filter-result"></p>
                 </div>
             </section>
 

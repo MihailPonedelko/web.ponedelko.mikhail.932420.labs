@@ -266,3 +266,13 @@ footer {
         grid-template-columns: 1fr;
     }
 }
+
+#measurement-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+[hidden] {
+    display: none !important;
+}
