@@ -80,6 +80,8 @@ function reportAnomalies() {
 }
 
 function getResults() {
+    var userName = prompt('Как вас зовут?') || 'Исследователь';
+    alert('Здравствуйте, ' + userName + '!');
     var text = prompt('Введите от 5 до 7 измерений через пробел, запятую или точку с запятой. Дробная часть — через точку. Например: 5 10 25 40 60 80 100');
     if (text === null) {
         return;
@@ -96,6 +98,10 @@ function getResults() {
     document.getElementById('filter-result').textContent = '';
     document.getElementById('measurement-actions').hidden = false;
     reportAnomalies();
+    var average = calculateAverage(measurements);
+    var filtered = filterAboveAverage(measurements);
+    alert('Среднее значение – ' + average.toFixed(2).replace('.', ',') +
+        ', ' + filtered.length + ' измерений – выше среднего');
 }
 
 function showMaximum() {
@@ -116,12 +122,9 @@ function showFilteredValues() {
     if (measurements.length === 0) {
         return;
     }
-    var average = calculateAverage(measurements);
     var filtered = filterAboveAverage(measurements);
     document.getElementById('filter-result').textContent = 'Значения выше среднего: ' +
         (filtered.length === 0 ? 'нет' : filtered.join(', '));
-    alert('Среднее значение – ' + average.toFixed(2).replace('.', ',') +
-        ', ' + filtered.length + ' измерений – выше среднего');
 }
 
 function performAll() {
@@ -130,6 +133,5 @@ function performAll() {
     }
     showMaximum();
     showSum();
-    reportAnomalies();
     showFilteredValues();
 }
