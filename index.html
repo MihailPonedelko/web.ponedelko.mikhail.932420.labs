@@ -7,10 +7,11 @@
         name="description"
         content="Страница о научных интересах Понеделко Михаила"
     >
-    <title>lab04 - 15</title>
+    <title>lab05 - 15</title>
     <link rel="stylesheet" type="text/css" href="style.css">
 
     <script src="script.js" defer></script>
+    <script src="dom.js" defer></script>
 
     <style>
         main h2,
@@ -34,6 +35,7 @@
             <p class="student-info">Студент группы 932420</p>
             <h1>Михаил Понеделко</h1>
         </div>
+        <button id="theme-button" type="button" aria-pressed="false">Тёмная тема</button>
         <nav aria-label="Навигация по странице">
             <ul>
                 <li><a href="#skills">Навыки</a></li>
@@ -83,23 +85,13 @@
 
             <section id="hypotheses">
                 <h2>Гипотезы исследования</h2>
-                <div class="hypothesis-list">
-                    <article class="hypothesis-card">
-                        <h3>Алгоритмы рекомендаций</h3>
-                        <p>Персональные рекомендации влияют на выбор пользователя.</p>
-                        <p><strong>Статус:</strong> проверяется</p>
-                    </article>
-                    <article class="hypothesis-card">
-                        <h3>Параллельные вычисления</h3>
-                        <p>Параллельная обработка сокращает время расчёта.</p>
-                        <p><strong>Статус:</strong> проверяется</p>
-                    </article>
-                    <article class="hypothesis-card">
-                        <h3>Прогнозирование</h3>
-                        <p>Модель машинного обучения может точнее предсказывать результат.</p>
-                        <p><strong>Статус:</strong> запланирована</p>
-                    </article>
+                <div class="controls">
+                    <button id="add-hypothesis" type="button">Добавить гипотезу</button>
+                    <button id="toggle-hypotheses" type="button" aria-expanded="true" aria-controls="hypothesis-list">Скрыть гипотезы</button>
                 </div>
+                <p id="hypothesis-count"></p>
+                <p id="hypothesis-message" class="status-message" role="status"></p>
+                <div id="hypothesis-list" class="hypothesis-list"></div>
             </section>
 
             <section id="methods">

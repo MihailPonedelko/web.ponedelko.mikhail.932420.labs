@@ -267,12 +267,97 @@ footer {
     }
 }
 
+[hidden] {
+    display: none !important;
+}
+
+.controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: flex-end;
+}
+
+#theme-button {
+    margin: 15px auto 0;
+}
+
+button {
+    cursor: pointer;
+    font-family: var(--main-font);
+}
+
+.hypothesis-card {
+    min-width: 0;
+    overflow-wrap: anywhere;
+}
+
+.hypothesis-card.is-checked {
+    border: 2px solid #287144;
+}
+
+.status-message:empty {
+    display: none;
+}
+
+.status-message.error {
+    color: #a12020;
+}
+
+body.dark-theme {
+    --main-color: #1d2d3d;
+    --accent-color: #9ccfff;
+    background-color: #1d2d3d;
+    color: #e6eff7;
+}
+
+.dark-theme main {
+    background-color: #14202c;
+}
+
+.dark-theme header,
+.dark-theme footer,
+.dark-theme button,
+.dark-theme .research-mark {
+    background-color: #123d66;
+    color: white;
+}
+
+.dark-theme aside {
+    background-color: rgba(20, 32, 44, 0.8);
+}
+
+.dark-theme input,
+.dark-theme textarea,
+.dark-theme select {
+    background-color: #1d2d3d;
+    color: #e6eff7;
+}
+
+.dark-theme input::placeholder,
+.dark-theme textarea::placeholder {
+    color: #b6c6d6;
+}
+
+.dark-theme a {
+    color: #a9d8ff;
+}
+
+.dark-theme a:visited {
+    color: #d4baff;
+}
+
+.dark-theme nav a,
+.dark-theme nav a:visited {
+    color: white;
+}
+
+.dark-theme .status-message.error {
+    color: #ffb0b0;
+}
+
 #measurement-actions {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
-}
-
-[hidden] {
-    display: none !important;
 }
